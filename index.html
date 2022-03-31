@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/main.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
   <script type="text/javascript" src="./scripts/main.js" defer></script>
   <title>Tic Tac Toe</title>
 </head>
@@ -14,7 +15,8 @@
   <!-- Header/Scoreboard -->
   <header>
     <h1>Tic Tac Toe</h1>
-    <div class="is-hidden">
+    <!-- Add class="is-hidden" to div below-->
+    <div id="scoreboard" class="is-hidden">
       <div id="player_title">
         <h3>Player 1</h3>
         <h3>Player 2</h3>
@@ -31,8 +33,9 @@
     <button id="start_btn">start</button>
 
     <!-- Tic Tac Toe Board -->
-    <div class="is-hidden">
-      <table>
+    <div id="game" class="is-hidden">
+      <p id="text"></p>
+      <table id="board" class="is-hidden">
         <tr>
           <td id="sqr_1"></td>
           <td id="sqr_2"></td>
@@ -51,7 +54,7 @@
       </table>
 
       <!-- Reset Button -->
-      <button id="reset_btn">Reset</button>
+      <button id="reset_btn" class="is-hidden">Reset</button>
     </div>
   </main>
 

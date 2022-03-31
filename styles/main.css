@@ -17,6 +17,10 @@ body {
   position: relative;
 }
 
+.is-hidden {
+  display: none;
+}
+
 /* Header Styles */
 header {
   margin-bottom: 50px;
@@ -49,14 +53,23 @@ h1 {
 }
 
 /* TIC TAC TOE */
-.is-hidden {
-  display: none;
-}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#text {
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 table {
@@ -70,6 +83,8 @@ td {
   text-align: center;
   border: 1px lightgray solid;
   border-radius: 3px;
+  font-weight: bold;
+  text-transform: capitalize;
   font-size: 56px;
   transition: all 350ms ease-in-out;
 }
@@ -103,8 +118,8 @@ button {
   background-color: yellow;
 }
 
-#start_btn:active {
-  padding: 15px 100px;
+#start_btn:active, #reset_btn:active {
+  padding: 15px 116px;
 }
 
 #reset_btn {
@@ -116,8 +131,4 @@ button {
   color: white;
   cursor: pointer;
   background-color: lightcoral;
-}
-
-#reset_btn:active {
-  padding: 15px 100px;
 }
