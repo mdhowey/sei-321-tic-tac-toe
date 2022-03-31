@@ -2,6 +2,7 @@
 // Buttons
 const $start_btn = $('#start_btn');
 const $reset_btn = $('#reset_btn');
+const $square = $('td');
 
 // Game Board
 const $game = $('#game');
@@ -47,7 +48,7 @@ $reset_btn.on('click', () => {
 });
 
 // Toggle Player Turn
-$("td").click(function () {
+$square.click(function () {
   if (turn == 1) {
     $("#text").text("player 2 is up!");
     $(this).text("x");
@@ -67,3 +68,6 @@ $("td").click(function () {
     console.log(this);
   }
 });
+
+// Stop Players from Invalid Moves
+// i.e.- remarking a previously chosen square
