@@ -1,0 +1,123 @@
+/* Reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Screen Styles */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: darkslategrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header Styles */
+header {
+  margin-bottom: 50px;
+  /* position: absolute; */
+  top: 0;
+  color: rgb(97, 97, 97);
+  background-color: lightblue;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+h1 {
+  letter-spacing: 2px;
+  padding: 5px 30px;
+}
+
+/* SCOREBOARD */
+#player_title {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(100, 100, 100);
+}
+
+#score {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px 0 25px;
+  font-size: 26px;
+}
+
+/* TIC TAC TOE */
+.is-hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+td {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  border: 1px lightgray solid;
+  border-radius: 3px;
+  font-size: 56px;
+  transition: all 350ms ease-in-out;
+}
+
+td:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+td:active {
+  background-color: lightblue;
+  color: white;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  text-transform: uppercase;
+  padding: 15px 60px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+#start_btn {
+  background-color: lightgreen;
+}
+
+#start_btn:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
+
+#start_btn:active {
+  padding: 15px 100px;
+}
+
+#reset_btn {
+  background-color: lightpink;
+  margin-top: 30px;
+}
+
+#reset_btn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: lightcoral;
+}
+
+#reset_btn:active {
+  padding: 15px 100px;
+}

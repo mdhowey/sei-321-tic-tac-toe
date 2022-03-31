@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script type="text/javascript" src="./scripts/main.js" defer></script>
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <!-- Header/Scoreboard -->
+  <header>
+    <h1>Tic Tac Toe</h1>
+    <div class="is-hidden">
+      <div id="player_title">
+        <h3>Player 1</h3>
+        <h3>Player 2</h3>
+      </div>
+      <div id="score">
+        <h3>0</h3>
+        <h3>1</h3>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Start Button -->
+    <button id="start_btn">start</button>
+
+    <!-- Tic Tac Toe Board -->
+    <div class="is-hidden">
+      <table>
+        <tr>
+          <td id="sqr_1"></td>
+          <td id="sqr_2"></td>
+          <td id="sqr_3"></td>
+        </tr>
+        <tr>
+          <td id="sqr_4"></td>
+          <td id="sqr_5"></td>
+          <td id="sqr_6"></td>
+        </tr>
+        <tr>
+          <td id="sqr_7"></td>
+          <td id="sqr_8"></td>
+          <td id="sqr_9"></td>
+        </tr>
+      </table>
+
+      <!-- Reset Button -->
+      <button id="reset_btn">Reset</button>
+    </div>
+  </main>
+
+</body>
+
+</html>
