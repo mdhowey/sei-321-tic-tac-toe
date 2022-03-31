@@ -27,7 +27,7 @@ let turn = 1;
 // ==== Button Event Listeners ==== //
 
 // Start Game
-$start_btn.on('click', () => {
+$start_btn.click(function () {
   $start_btn.addClass('is-hidden');
   $game.removeClass('is-hidden');
   $text.text("player 1 is up!");
@@ -37,7 +37,7 @@ $start_btn.on('click', () => {
 });
 
 // Reset Game
-$reset_btn.on('click', () => {
+$reset_btn.click(function () {
   $start_btn.removeClass('is-hidden');
   $game.addClass('is-hidden');
   $text.text("");
@@ -49,25 +49,39 @@ $reset_btn.on('click', () => {
 
 // Toggle Player Turn
 $square.click(function () {
-  if (turn == 1) {
-    $("#text").text("player 2 is up!");
-    $(this).text("x");
-    turn = 2;
+  let isEmpty = true;
 
-    //TODO: Talk about this console log
-    // What is 'this'?
-    console.log(this);
-  }
-  else {
-    $("#text").text("player 1 is up!");
-    $(this).text("o");
-    turn = 1;
+  if (turn === 1) {
+    //TODO: Talk about ':empty'
+    //TODO: Talk about '.is'
+    if ($(this).is(':empty')) {
+      $("#text").text("player 2 is up!");
+      $(this).text("x");
+      turn = 2;
+      isEmpty = false;
 
-    //TODO: Talk about this console log
-    // What is 'this'?
-    console.log(this);
+      //TODO: Talk about this console log
+      // What is 'this'?
+      console.log(this);
+    } else {
+      $(this).css("background-color", "lightcoral");
+      setTimeout(() => {
+        $(this).css("background-color", "white");
+      }, 250); 
+    }
+
+  } else {
+    //TODO: Talk about ':empty'
+    //TODO: Talk about '.is'
+    if ($(this).is(':empty')) {
+      $("#text").text("player 1 is up!");
+      $(this).text("o");
+      turn = 1;
+      isEmpty = false;
+
+      //TODO: Talk about this console log
+      // What is 'this'?
+      console.log(this);
+    }
   }
 });
-
-// Stop Players from Invalid Moves
-// i.e.- remarking a previously chosen square
